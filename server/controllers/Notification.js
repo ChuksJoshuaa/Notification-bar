@@ -5,11 +5,11 @@ import Notification from "../models/Notification.js";
 export const insertNotification = async (_, res) => {
   try {
     await seedDatabase();
-    res.status(StatusCodes.OK).send("Database seeded successfully!");
+    res.status(StatusCodes.OK).json({ message: "Database seeded." });
   } catch (error) {
     res
       .status(StatusCodes.INTERNAL_SERVER_ERROR)
-      .send("Error seeding database.");
+      .json({ message: error.message });
   }
 };
 

@@ -132,9 +132,7 @@ export const seedDatabase = async () => {
     await Notification.deleteMany({});
     await Notification.insertMany(notifications);
     console.log("Database seeded successfully!");
-    process.exit();
   } catch (err) {
     console.error("Error seeding database:", err);
-    process.exit(1);
   }
 };
