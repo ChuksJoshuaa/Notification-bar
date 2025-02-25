@@ -1,6 +1,6 @@
 ## Server
 
-The server is built with MongoDB, Express, and Node. It provides a REST API for managing todos.
+The server is built with MongoDB, Express, and Node. It provides a REST API for managing notifications.
 
 #### Setup
 
