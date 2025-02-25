@@ -1,50 +1,80 @@
-# React + TypeScript + Vite
+# Notification Bar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="https://res.cloudinary.com/chuksmbanaso/image/upload/v1740500051/Screenshot_2025-02-25_at_17.09.45_uanaki.png" title="Image" alt="image">
 
-Currently, two official plugins are available:
+A simple Facebook like notification bar
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Redux**: For state management.
+- **TypeScript**: For type safety.
+- **CSS Modules**: For scoped and modular CSS.
+- **Vite**: For fast development and build tooling.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+Before you begin, ensure you have the following installed:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Node.js**: Version 20.15.1 or higher
+- **npm**: Version 10.7.0 or higher
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Technologies Used
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **React.js**: For building the user interface
+- **Tailwind CSS**: For styling
+- **Redux**: For state management
+- **Typescript**: For type safety
+- **JavaScript**: Core programming language
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Installation
+
+To install and run project locally, follow these steps:
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/ChuksJoshuaa/Notification-bar.git
+   ```
+
+2. **Install the repository**:
+
+   ```bash
+   npm install --force
+   ```
+
+3. **Build the repository with docker**:
+   ```bash
+   docker-compose up --build
+   ```
+
+## Usage
+
+To start the application and begin using project, follow these steps:
+
+1. **Start the application**:
+   ```bash
+   npm run dev
+   ```
+2. **Open your web browser** and navigate to
+   ```bash
+   http://localhost:5173
+   ```
+
+## Contributing
+
+Contributions are welcome! To contribute to project, follow these steps:
+
+1. **Fork the repository**.
+2. **Create a new branch**:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Make your changes and commit them**:
+   ```bash
+   git commit -m 'Add some feature'
+   ```
+4. **Push to the branch**:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. **Submit a pull request**.
