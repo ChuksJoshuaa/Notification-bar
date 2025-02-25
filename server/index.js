@@ -1,16 +1,19 @@
+import bodyParser from "body-parser";
+import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
-import cors from "cors";
-import bodyParser from "body-parser";
 import rateLimiter from "express-rate-limit";
 import helmet from "helmet";
 import { configDB, connectDB } from "./db/connect.js";
 
 dotenv.config();
 
+// Routes
+import notificationRoutes from "./routes/Notification.js";
+
 // Error imports
-import notFound from "./middleware/not-found.js";
 import errorHandlerMiddleware from "./middleware/error-handler.js";
+import notFound from "./middleware/not-found.js";
 
 const app = express();
 const PORT = process.env.PORT || 9000;
@@ -45,6 +48,8 @@ const startServer = async () => {
 app.get("/", (_, res) => {
   res.send("Api working perfectly!");
 });
+
+app.use("/api/v1/notification", notificationRoutes);
 
 // Errors
 app.use(errorHandlerMiddleware);

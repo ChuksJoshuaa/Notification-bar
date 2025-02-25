@@ -20,7 +20,10 @@ npm install && npm run dev
 
 The API is designed to handle the following endpoints:
 
-- `POST /api/v1/`: Create a todo
+- `POST /api/v1/notification/seed`: Insert dummy notifications data
+- `GET /api/v1/notification`: Get all notifications data
+- `PATCH /api/v1/notification/:id/read`: Mark a notification as read
+- `PATCH /api/v1/notification/:id/read-all`: Mark all notification as read
 
 #### Database Connection
 
