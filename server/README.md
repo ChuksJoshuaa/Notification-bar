@@ -31,6 +31,7 @@ The API is designed to handle the following endpoints:
 2. Invoke in startServer()
 3. Setup .env in the root
 4. Add MONGO_URI with correct value
+5. Add PORT i.e 9000
 
 #### Security
 
